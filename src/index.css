@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-body-100: #e0e0e0;
+  --font-heading: "Bebas Neue", "DM Sans", "Playfair Display";
+  --font-body: "Inter", "Open Sans", "DM Sans";
+  --color-custom-100: rgba(0, 0, 0, 0.7);
+  --color-custom-200: rgba(255, 255, 255, 0.1);
+  --color-background-100: #8b0000;
+}
+
+@layer base {
+  main {
+    @apply relative z-0 bg-background-100 flex items-center justify-center min-h-screen;
+  }
+  & header {
+    @apply flex flex-col items-center my-10;
+  }
+}
+
+@layer components {
+  .card-box {
+    @apply w-[18rem] sm:w-full h-fit py-3 bg-custom-100 flex flex-col items-center justify-between rounded-2xl hover:bg-custom-200 text-body-100 hover:cursor-pointer;
+  }
+  .card-image {
+    @apply w-[14rem] sm:w-11/12 h-11/12 flex flex-col items-center justify-center;
+    & img {
+      @apply w-full h-full rounded-xl;
+    }
+  }
+  .card-title {
+    @apply px-2 mt-2 flex flex-col items-center justify-center;
+  }
+}
+@utility wrapper {
+  @apply z-30 h-full sm:w-xl md:w-2xl lg:w-4xl;
+}
+@utility moving-pattern {
+  @apply absolute z-10 top-0;
+}
+@utility blur-glass {
+  @apply absolute z-20 h-full w-full shadow-md opacity-50 backdrop-blur-md border-white/20;
+}
+@utility search-box {
+  @apply bg-amber-100 rounded-2xl w-72 md:w-lg flex justify-between pl-3 py-2;
+}
+@utility search-bar {
+  @apply outline-none w-full pl-5;
+}
