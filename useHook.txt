@@ -1,0 +1,19 @@
+React Hooks Refresher – Your Developer Toolkit at a Glance
+React Hooks are powerful — but even experienced devs benefit from a quick reminder now and then.
+Here’s a compact rundown of the most-used ones 👇
+🔁 useState
+ Manages local state. When you need a value to change over time (like toggles, inputs, counters), this is your go-to.
+📡 useEffect
+ Handles side effects (data fetching, subscriptions, manual DOM changes). Think: "do this when X changes."
+📦 useContext
+ Access shared/global state across deeply nested components without prop drilling. Perfect for themes, auth, language, etc.
+🧠 useMemo
+ Memoizes expensive computations so they don’t re-run unnecessarily. Ideal for optimizing performance-heavy calculations.
+🔄 useCallback
+ Returns the same function instance unless dependencies change — helps avoid unnecessary re-renders when passing functions as props.
+🔎 useRef
+ Keeps a persistent mutable reference between renders. Often used for DOM access or to store non-stateful values.
+🎣 useReducer
+ An alternative to useState for complex state logic or state that depends on previous values. Inspired by Redux patterns.
+💡 Bonus tip: Think of useContext as the frontend cousin of global state or injected services — like a read-only API available anywhere in your component tree.
+📌 Save this post for later as a cheat sheet — and if you’ve got a favorite custom hook you lean on often, drop it in the comments!
